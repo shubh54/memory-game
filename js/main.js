@@ -64,6 +64,7 @@ function initialize_grid(){
                     $(this).css('background', grid_color[this.id]);                
                 }
                 else if(flipped_card.length  == 1 && this.id != flipped_card[0]){
+                    flipped_card.push(this.id);
                     $(this).css('background', grid_color[this.id]);                                                
                 }
                 $(this).toggleClass('rotated');
@@ -74,7 +75,7 @@ function initialize_grid(){
 }
 
 function flip_card(el){
-    if(flipped_card.length  == 1 && el.id != flipped_card[0]){
+    if(flipped_card.length  == 2 && el.id != flipped_card[0]){
         if($(el).css('background') == $('#'+flipped_card[0]).css('background')){
             $(el).css('background', '#444');
             $('#'+flipped_card[0]).css('background', '#444');
