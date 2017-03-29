@@ -86,7 +86,7 @@ function flip_card(el){
             }
         }
         else{
-            setTimeout(deselect_tile, 250,el.id, flipped_card[0]);
+            setTimeout(deselect_tile, 100,el.id, flipped_card[0]);
             if(flipped_tile_count < 2){
                 score = 0;
             } else {
