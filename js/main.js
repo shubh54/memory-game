@@ -67,7 +67,7 @@ function initialize_grid(){
                     $(this).css('background', grid_color[this.id]);                                                
                 }
                 $(this).toggleClass('rotated');
-                setTimeout(flip_card, 600, this);
+                setTimeout(flip_card, 400, this);
             }            
         }
     )
@@ -86,7 +86,7 @@ function flip_card(el){
             }
         }
         else{
-            setTimeout(deselect_tile, 100,el.id, flipped_card[0]);
+            deselect_tile(el.id,flipped_card[0])
             if(flipped_tile_count < 2){
                 score = 0;
             } else {
