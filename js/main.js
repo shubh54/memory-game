@@ -76,7 +76,7 @@ function initialize_grid(){
 
 function flip_card(el){
     if(flipped_card.length  == 2 && el.id != flipped_card[0]){
-        if($(el).css('background') == $('#'+flipped_card[0]).css('background')){
+        if($(el).css('background-color') == $('#'+flipped_card[0]).css('background-color')){
             $(el).css('background', '#444');
             $('#'+flipped_card[0]).css('background', '#444');
             flipped_tile_count = flipped_tile_count+2;
